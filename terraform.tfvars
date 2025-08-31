@@ -1,2 +1,2 @@
-bucket_name    = "my-artifact-bucket-12345"
+bucket_name    = "Test-Bucket"
 artifact_files = ["file1.txt", "image.png"]
