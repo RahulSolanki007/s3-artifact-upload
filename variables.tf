@@ -4,10 +4,20 @@ variable "bucket_name" {
   default     = "test-bucket"
 }
 
+variable "environment" {
+  description = "Deployment environment name (e.g., dev, staging, prod)"
+  type        = string
+  default     = "dev"
+}
+
 variable "region" {
   description = "AWS region"
   type        = string
   default     = "us-east-1"
+}
+
+resource "random_id" "bucket_suffix" {
+  byte_length = 4
 }
 
 variable "artifact_files" {
