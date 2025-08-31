@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "artifact_bucket" {
-  bucket = "${var.environment}-${var.aws_region}-${random_id.bucket_suffix.hex}"
+  bucket = "${var.environment}-${var.region}-${random_id.bucket_suffix.hex}"
 
   tags = {
     Name        = "Artifact Bucket"
