@@ -24,7 +24,7 @@ resource "aws_s3_bucket_ownership_controls" "ownership" {
 
 resource "aws_s3_bucket_acl" "bucket_acl" {
   bucket = aws_s3_bucket.artifact_bucket.id
-  acl    = "public"
+  acl    = "public-read"
 }
 
 resource "aws_s3_object" "artifacts" {
